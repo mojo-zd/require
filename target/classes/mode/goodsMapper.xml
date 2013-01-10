@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.spring.mybatis.GoodsMapper">
+
+<!-- define the insert delete update select  -->
+
+
+<!-- select all goods -->
+<select id="selectGoods" resultType="Goods">
+  select * from goods
+</select>
+
+<!-- select the goods base on the properties which you  give -->
+<select id="selectByCateId" parameterType="String" resultType="Goods">
+   select * from goods where cateId = #{cateId}
+</select>
+
+
+<insert id="insertGoods" parameterType="com.oryx.mybatis.Goods">
+ insert into goods(ID,CATE_ID,NAME,PRICE,DESCRIPTION,ORDER_NO,UPDATE_TIME)
+ VALUES (#{id},#{cateId},#{name},#{price},#{description},#{orderNo},#{date});
+</insert>
+
+<delete id="deletGoods" parameterType="String">
+  delete from goods where name = #{name}
+</delete>
+
+</mapper>

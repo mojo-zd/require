@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper>
+
+  <resultMap type="com.spring.mybatis.bean.Goods" id="GoodsMapper">
+      
+      <id property="id"  column="id"/>
+      <result property="cateId" column="cateId"/>
+      <result property="name" column="name"/>
+      <result property="price" column="price"/>
+      <result property="description" column="description"/>
+      <result property="orderNo" column="orderNo"/>
+      <result property="date" column="date"/>
+      
+  </resultMap>
+</mapper>
+
+
+
