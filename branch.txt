@@ -1,3 +1,0 @@
-添加新分支并且提交到远程仓库
-git branch new_branch
-git push origin new_branch
